@@ -8,6 +8,7 @@ Pour utiliser le fichier 'MATE_command.py' :
 - move2x3axes || Permet de faire bouger 2 MATEs en même temps à l'aide de 2 listes de valeurs par moteurs en degrés
 
 - Changez le MAIN selon les positions que vous souhaitez lui donner
+
 Le programme envoie 0N de couple à la fin pour éviter des collisions
 
 ### SCARA
@@ -18,4 +19,5 @@ Pour utiliser le fichier 'MATE_command.py' :
 - pickandplace || Permet de faire un mouvement de pick ou de place sans gérer la pince à l'aide des valeurs finales du robot pret à poser/déposer
 
 - Changez le MAIN selon les positions que vous souhaitez lui donner
+
 Le programme envoie 0N de couple à la fin pour éviter des collisions
