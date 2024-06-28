@@ -21,3 +21,9 @@ Pour utiliser le fichier 'MATE_command.py' :
 - Changez le MAIN selon les positions que vous souhaitez lui donner
 
 Le programme envoie 0N de couple à la fin pour éviter des collisions
+
+## Trajectory
+
+## Pos_0torque
+
+## Robotics Place Code
