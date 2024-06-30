@@ -30,6 +30,7 @@ def move2x3axes(qd1, qd2, tf):
             robot1.send3Position(q1[0][i], q1[1][i], q1[2][i])
             robot2.send3Position(q2[0][i], q2[1][i], q2[2][i])
 
+
 # don't forget to change can channels
 robot1 = RobotController({"channel":'can0',"bus_index":0,"IDs":[14, 5, 11],"max_vels":[1500, 1500, 1500]})
 robot2 = RobotController({"channel":'can1',"bus_index":0,"IDs":[17, 23, 10],"max_vels":[1500, 1500, 1500]})
