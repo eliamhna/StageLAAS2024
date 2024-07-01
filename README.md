@@ -1,6 +1,8 @@
 # StageLAAS2024
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 
+Created by Eliam Hanna
+
 ## utils
 'utils.py' est le programme contenant les commandes des robots permettant de commander les moteurs en positions, vitesses et couples
 
@@ -62,8 +64,8 @@ Tout ce fait automatiquement;
 On commence par lancer le programme et choisir entre :
 
 (le programme gère 1 SCARA et 2 MATE)
-### 1 learn new positions
+### 1- learn new positions
 On vient choisir le nombre de positions que l'on souhaite, on valide chaque positions une après l'autre et le programme écrit dans un fichier csv 'trajectory_rpd.py' les positions ou le programme va aller
 
-### 2 movement 'pick and place'
+### 2- movement 'pick and place'
 On donne au programme les positions du gripper (ouvert ou fermé) pour chaque positions du fichier enregistrés avant 'trajectory_rpd.py', puis le programme va lire les positions et les reproduire sous forme de 'pick and place' pour le SCARA
