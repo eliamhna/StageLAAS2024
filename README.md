@@ -55,7 +55,9 @@ Pour utiliser le fichier 'RoboticsPlaceCode.py' :
 - nb_tours = x || Change le nombre d'itération où le programme va faire les mouvements prévu
 
 Tout ce fait automatiquement;
+
 On commence par lancer le programme et choisir entre :
+
 (le programme gère 1 SCARA et 2 MATE)
 ### 1 learn new positions
 On vient choisir le nombre de positions que l'on souhaite, on valide chaque positions une après l'autre et le programme écrit dans un fichier csv 'trajectory_rpd.py' les positions ou le programme va aller
