@@ -27,7 +27,7 @@ def moveJ(qi, qf, tf, Te):          # return all pos from 'qi' to 'qf' in 'tf' s
     return q
 
 def writeCSV():                     # write all final positions in file
-    with open('trajectory.csv', 'w', newline='') as fichier_csv:
+    with open('trajectory_rpd.csv', 'w', newline='') as fichier_csv:
         writer = csv.writer(fichier_csv)
         for pos in all_pos:
                 writer.writerow(pos)
@@ -137,10 +137,16 @@ def goPosition(iter, gripper):      # go to 6 positions 'pick and place'
 ####### INITIALISATION #######
 ##############################
   
-motor1 = MotorController({"channel":'can0',"bus_index":0,"motor_id":4})     # SCARA
-motor2 = MotorController({"channel":'can1',"bus_index":0,"motor_id":13})    # |
-motor3 = MotorController({"channel":'can2',"bus_index":0,"motor_id":12})    # |
-motor4 = MotorController({"channel":'can3',"bus_index":0,"motor_id":2})     # |
+# Connect can bus for control motors
+SO = [21, 18, 20, 8, 33.33]     # Use 'SO' if you use Orange SCARA (ID: 21 | 18 | 20 | 8) (33.33 for endless screw)
+SR = [6, 13, 12, 2, 3.333]      # Use 'SR' if you use Red SCARA (ID: 6 | 13 | 12 | 2) (3.333 for endless screw)
+
+params_robots = SR      # <- Use here 'SO' or 'SR'
+
+motor1 = MotorController({"channel":'can0',"bus_index":0,"motor_id":params_robots[0]})  # | SCARA
+motor2 = MotorController({"channel":'can0',"bus_index":0,"motor_id":params_robots[1]})  # |
+motor3 = MotorController({"channel":'can0',"bus_index":0,"motor_id":params_robots[2]})  # |
+motor4 = MotorController({"channel":'can0',"bus_index":0,"motor_id":params_robots[3]})  # |
 
 robot1 = RobotController({"channel":'can4',"bus_index":0,"IDs":[14, 5, 6],"max_vels":[750, 750, 750]})      # MATE 1
 robot2 = RobotController({"channel":'can5',"bus_index":0,"IDs":[17, 23, 10],"max_vels":[750, 750, 750]})    # MATE 2
@@ -159,7 +165,7 @@ st_pos = [motor1.position, motor2.position, motor3.position, 0,#motor4.position,
           robot2.positions[0], robot2.positions[1], robot2.positions[2]]    # Positions at 0 for new positions
 
 pos_read = []       # Read trajectory file for movement
-with open('trajectory.csv', newline='') as csvfile:
+with open('trajectory_rpd.csv.csv', newline='') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in spamreader:
         row_nb = []
@@ -171,11 +177,10 @@ with open('trajectory.csv', newline='') as csvfile:
 ############ MAIN ############
 ##############################
 
-choice = '2'
-"""input('1 : Save New Positions\n'
+choice = input('1 : Save New Positions\n'
                '2 : Movement\n'
                '? --> ')                        # choice for learn new positions & movement 'pick and place'
-"""
+
 if choice == '1':   # learn new positions
     nb_pos = int(input('\n\nHow many new pos ?\n? --> '))
     for nnp in range(nb_pos):
