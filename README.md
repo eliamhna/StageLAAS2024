@@ -1,6 +1,9 @@
 # StageLAAS2024
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 
+## utils
+'utils.py' est le programme contenant les commandes des robots permettant de commander les moteurs en positions, vitesses et couples
+
 ## Commands
 ### MATE
 Pour utiliser le fichier 'MATE_command.py' :
