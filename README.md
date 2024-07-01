@@ -15,7 +15,7 @@ Pour utiliser le fichier 'MATE_command.py' :
 Le programme envoie 0N de couple à la fin pour éviter des collisions
 
 ### SCARA
-Pour utiliser le fichier 'MATE_command.py' :
+Pour utiliser le fichier 'SCARA_command.py' :
 - hz = x || Permet de changer la valeur en hertz du programme
 - SO/SR || Selon le SCARA utilisé, mettez SO pour le SCARA Orange et SR pour le SCARA Rouge (ligne 54)
 - move4axes || Permet de faire bouger le SCARA  à l'aide d'une liste de valeurs par moteurs en degrés pour les angles q1, q2, q4 et en centimètres pour le moteur q3
@@ -37,7 +37,7 @@ Pour utiliser le fichier 'create_trajectory.py' :
 Le programme écrit ensuite les valeurs prises depuis la simulation dans un fichier csv : 'trajectory.csv'
 
 ### Read
-Pour utiliser le fichier 'MATE_command.py' :
+Pour utiliser le fichier 'read_trajectory.py' :
 - hz = x || Permet de changer la valeur en hertz du programme
 - SO/SR || Selon le SCARA utilisé, mettez SO pour le SCARA Orange et SR pour le SCARA Rouge (ligne 54)
 
@@ -66,4 +66,4 @@ On commence par lancer le programme et choisir entre :
 On vient choisir le nombre de positions que l'on souhaite, on valide chaque positions une après l'autre et le programme écrit dans un fichier csv 'trajectory_rpd.py' les positions ou le programme va aller
 
 ### 2 movement 'pick and place'
-On donne au programme les positions du gripper (ouvert ou fermé) pour chaque positions du fichier enregistrés avant, puis le programme va lire les positions et les reproduire sous forme de 'pick and place' pour le SCARA
+On donne au programme les positions du gripper (ouvert ou fermé) pour chaque positions du fichier enregistrés avant 'trajectory_rpd.py', puis le programme va lire les positions et les reproduire sous forme de 'pick and place' pour le SCARA
