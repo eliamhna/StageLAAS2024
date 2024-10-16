@@ -68,4 +68,4 @@ On commence par lancer le programme et choisir entre :
 On vient choisir le nombre de positions que l'on souhaite, on valide chaque positions une après l'autre et le programme écrit dans un fichier csv 'trajectory_rpd.py' les positions ou le programme va aller
 
 ### 2- movement 'pick and place'
-On donne au programme les positions du gripper (ouvert ou fermé) pour chaque positions du fichier enregistrés avant 'trajectory_rpd.py', puis le programme va lire les positions et les reproduire sous forme de 'pick and place' pour le SCARA
+On donne au programme les positions du gripper (ouvert ou fermé) pour chaque positions du fichier enregistrés avant 'trajectory_rpd.py', puis le programme va lire les positions et les reproduire sous forme de 'pick and place' pour le SCARA.
